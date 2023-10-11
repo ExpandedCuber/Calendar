@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0e0e0e;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-body {
+    width: 90%;
+    height: 85%;
+    background-color: #303030;
+}
+
+.top {
+    width: auto;
+    height: 10vh;
+    background-color: #494949;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    width: 4vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 1.5vw;
+    border-radius: 5%;
+    border: none;
+    background-color: #555555;
+    color: white;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    background-color: rgb(63, 63, 63);
+}
+
+.right-arrow {
+    margin-left: auto;
+    margin-right: 1vw;
+}
+
+.left-arrow {
+    margin-left: 1vw;
+}
+
+.month {
+    color: white;
+    margin-left: auto;
+    font-size: 3vw;
+}
+
+.day-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if necessary */
+    justify-content: space-between; /* Distributes buttons evenly */
+    align-content: flex-start; /* Aligns buttons to the top of the container */
+    align-items: flex-start; /* Aligns buttons to the top of each row */
+}
+
+.day {
+    width: 15vw;
+    height: 11.6vh;
+    border: none;
+    background-color: #d3d3d3;
+}
+
+.day:hover {
+    background-color: rgb(201, 201, 201);
+    border: 1px solid;
+}
+
+.input-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding-right: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Ensure it's above other content */
+    width: 20%;
+    height: 20%;
+    pointer-events: auto;
+}
+
+.popupInput {
+    width: 100%;
+    height: 85%;
+    overflow: scroll;
+}
+
+button#saveButton {
+    width: 2vw;
+    height: 1vw;
+    display: block;
+    margin: 0 auto;
+    background-color: blue;
+    border: none;
+    color: white;
+    margin-top: 3px;
+    font-size: 0.8vw;
+}
+
+#saveButton:hover {
+    background: rgb(0, 0, 209);
+    cursor: pointer;
+}
